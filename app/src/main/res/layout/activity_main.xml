@@ -12,8 +12,12 @@
     <CheckBox
         android:id="@+id/cb_test"
         android:text="Test"
+        android:layout_centerInParent="true"
         android:drawableLeft="@drawable/sort_distance_default"
         android:button="@null"
+        android:textColor="@color/normal_color_selector"
+        android:textSize="18sp"
+        android:drawablePadding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </RelativeLayout>

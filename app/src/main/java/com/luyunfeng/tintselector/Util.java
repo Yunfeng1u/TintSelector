@@ -16,6 +16,17 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 
 public class Util {
 
+    public static Drawable getCheckTintSelector(Context context, String function, @ColorRes int color) {
+
+        int defaultId = context.getResources().getIdentifier(function, "drawable", BuildConfig.APPLICATION_ID);
+
+        if (defaultId == 0) {
+            defaultId = R.drawable.ic_launcher;
+        }
+
+        return getCheckTintSelector(context, defaultId, color);
+    }
+
     public static Drawable getCheckTintSelector(Context context, @DrawableRes int drawableId, @ColorRes int color) {
 
         Resources resources = context.getResources();
@@ -27,17 +38,6 @@ public class Util {
         );
 
         return tintDrawable(drawable, colorList);
-    }
-
-    public static Drawable getCheckTintSelector(Context context, String function, @ColorRes int color) {
-
-        int defaultId = context.getResources().getIdentifier(function, "drawable", BuildConfig.APPLICATION_ID);
-
-        if (defaultId == 0) {
-            defaultId = R.drawable.ic_launcher;
-        }
-
-        return getCheckTintSelector(context, defaultId, color);
     }
 
     private static Drawable tintDrawable(Drawable drawable, ColorStateList colors) {
