@@ -3,14 +3,14 @@
 
 一个Tint着色器的简单使用，利用v4包中的DrawableCompat实现了低版本兼容。
 
-<br>
 
 ## 效果
 ![](https://github.com/Yunfeng1u/TintSelector/blob/master/art/pic1.png)
 ![](https://github.com/Yunfeng1u/TintSelector/blob/master/art/pic2.png)
 
-<br>
+
 ## 使用
+
 ```
    Drawable drawable = Util.getCheckTintSelector(this, R.drawable.sort_distance_default, R.color.normal_color_selector);
    // 通过反射
